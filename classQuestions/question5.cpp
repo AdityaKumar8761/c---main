@@ -4,7 +4,7 @@ using namespace std;
 int runningSum = 0; 
 
 void merge(int arr[], int l, int m, int r) {
-    runningSum = l+m+r;
+    runningSum += l+m+r;
 
     int n1 = m - l + 1;
     int n2 = r - m;
