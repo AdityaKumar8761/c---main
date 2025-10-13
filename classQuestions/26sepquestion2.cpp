@@ -8,11 +8,12 @@ struct node {
     node* next;
 };
 
-void input(node*& head) {  // pass by reference
+void input(node*& head) {  
+
     node* temp = head;
     if (head == nullptr) {
         node* n = new node;
-        cout << "enter the value and the power: ";
+        cout << "enter the value and the power:";
         cin >> n->coff >> n->pow;
         n->next = nullptr;
         head = n;
@@ -21,7 +22,7 @@ void input(node*& head) {  // pass by reference
             temp = temp->next;
         }
         node* n = new node;
-        cout << "enter the value and the power: ";
+        cout << "enter the value and the power:";
         cin >> n->coff >> n->pow;
         n->next = nullptr;
         temp->next = n;
@@ -52,7 +53,7 @@ void printresult(node* head, int x) {
     node* temp = head;
     while (temp != nullptr) {
         cout << temp->coff << "x^" << temp->pow;
-        if (temp->next != nullptr) cout << " + ";
+        if (temp->next != nullptr) cout << "+";
         result += temp->coff * pow(x, temp->pow);
         temp = temp->next;
     }
